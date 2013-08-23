@@ -22,6 +22,13 @@ import com.vperi.groovy.lang.match.OptionMatcher
 @SuppressWarnings("GroovyUnusedDeclaration")
 class Option extends DiscriminatedUnion {
   List types = [ Some, None ]
+  
+  /**
+   *  Create a "None" option.
+   * 
+   * To make it more scala-ish.   (Some(42) , None) instead of (Some(42), None())
+   */
+  static final Option None = new Option()
 
   /**
    *  Create a Some option
@@ -38,9 +45,6 @@ class Option extends DiscriminatedUnion {
    *
    * @return the option
    */
-  static Option None( ) {
-    new Option()
-  }
 
   /**
    *  Instantiates a new Option.
