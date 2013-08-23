@@ -41,12 +41,6 @@ class Option extends DiscriminatedUnion {
   }
 
   /**
-   *  Create a "None" option.
-   *
-   * @return the option
-   */
-
-  /**
    *  Instantiates a new Option.
    *
    * @param val the val
